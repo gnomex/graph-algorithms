@@ -1,3 +1,15 @@
 <section style="text-align: center;">
-	<h1>A simple Sinatra template</h1>
+	<p class="lead">Faça upload do arquivo com as coordenadas do grafo</p>
+
+  <form class="form-horizontal" role="form" method="post" action="/upload" enctype="multipart/form-data">
+    <section class="form-group">
+      <label for="file">Escolha o arquivo: </label>
+      <input type="file" name="myfile" id="file">
+    </section>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-upload"></i> Enviar</button>
+      <button type="button" class="btn">Cancelar</button>
+    </div>
+  </form>
 </section>

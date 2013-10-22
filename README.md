@@ -3,12 +3,12 @@
 
 ## Algorithms
 
-1.Depth-first search - BFS
-2.Breadth-first search - DFS
-3.Dijkstra
-4.Topological Sorting
-5.Kruskal
-6.Prim
+1. Depth-first search - BFS
+2. Breadth-first search - DFS
+3. Dijkstra
+4. Topological Sorting
+5. Kruskal
+6. Prim
 
 ## Usage
 
