@@ -1,15 +1,3 @@
-# Put unvisited nodes on a queue
-# Solves the shortest path problem: Find path from "source" to "target"
-# that uses the fewest number of edges
-# It's not recursive (like depth first search)
-#
-# The steps are quite simple:
-# * Put s into a FIFO queue and mark it as visited
-# * Repeat until the queue is empty:
-#   - Remove the least recently added node n
-#   - add each of n's unvisited adjacents to the queue and
-#     mark them as visited
-
 class BreathFirstSearch
   def initialize(graph, source_node)
     @graph = graph
@@ -44,6 +32,7 @@ class BreathFirstSearch
     # First step: Put the source node into a queue and mark it as visited
     queue = []
     queue << node
+    node.visited!
     @visited << node
 
     # Second step: Repeat until the queue is empty:
@@ -54,6 +43,7 @@ class BreathFirstSearch
       current_node.adjacents.each do |adjacent_node|
         next if @visited.include?(adjacent_node)
         queue << adjacent_node
+        adjacent_node.visited!
         @visited << adjacent_node
         @edge_to[adjacent_node] = current_node
       end

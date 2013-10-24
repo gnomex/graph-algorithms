@@ -26,6 +26,7 @@ class DepthFirstSearch
 
   private
   def dfs(node)
+    node.visited!
     @visited << node
     node.adjacents.each do |adj_node|
       next if @visited.include?(adj_node)

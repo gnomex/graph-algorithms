@@ -1,6 +1,5 @@
-require_relative "priority_queue"
-
 class Dijkstra
+
   def initialize(graph, source_node)
     @graph = graph
     @source_node = source_node
@@ -56,5 +55,30 @@ class Dijkstra
     # If the node is already in this priority queue, the only that happens is
     # that its distance is decreased.
     @pq.insert(edge.to, @distance_to[edge.to])
+  end
+
+  # A very simple priority key implementation to help our Dijkstra algorithm.
+  class PriorityQueue
+    def initialize
+      @queue = {}
+    end
+
+    def any?
+      @queue.any?
+    end
+
+    def insert(key, value)
+      @queue[key] = value
+      order_queue
+    end
+
+    def remove_min
+      @queue.shift.first
+    end
+
+    private
+    def order_queue
+      @queue.sort_by {|_key, value| value }
+    end
   end
 end

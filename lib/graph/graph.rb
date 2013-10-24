@@ -11,7 +11,7 @@ class Graph
     node.graph = self
   end
 
-  def add_edge(from, to, weight)
+  def add_edge(from, to, weight = nil)
     edges << Edge.new(from, to, weight)
   end
 end

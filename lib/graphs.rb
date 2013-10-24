@@ -1,7 +1,6 @@
 require_relative "graph/node"
 require_relative "graph/graph"
 require_relative "graph/edge"
-require_relative "graph/priority_queue"
 require_relative "algorithms/bfs"
 require_relative "algorithms/dfs"
 require_relative "algorithms/dijsktra"
