@@ -1,5 +1,4 @@
 class Dijkstra
-
   def initialize(graph, source_node)
     @graph = graph
     @source_node = source_node
